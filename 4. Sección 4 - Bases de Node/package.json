@@ -1,0 +1,18 @@
+{
+  "name": "4.-seccion-4---bases-de-node",
+  "version": "0.0.1",
+  "description": "Proyecto pequeño para aprender bases de node",
+  "main": "1. Tablas_de_multiplicar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "base3": "node app --base=3"
+  },
+  "author": "Santiago Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
