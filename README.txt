@@ -69,3 +69,6 @@ npm update.
 GIT 
 Iniciar proyecto git
 git init
+
+Devolver cambios
+git checkout --.
