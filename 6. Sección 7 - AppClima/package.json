@@ -1,0 +1,17 @@
+{
+  "name": "aplicacion-clima",
+  "version": "1.0.0",
+  "description": "Aplicacion que devuelve el clima de cualquier ciudad",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Santiago Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0"
+  }
+}

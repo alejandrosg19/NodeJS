@@ -1,0 +1,17 @@
+{
+  "name": "aplicacion-webserver",
+  "version": "1.0.0",
+  "description": "WebServer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Santiago Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.15"
+  }
+}

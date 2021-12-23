@@ -1,5 +1,7 @@
 Comando principal para iniciar el proyecto y crear el package.json
 npm init
+npm init -y -> Nos crea el proyecto y nos salta los pasos de tener que colocar los datos
+
 
 Te pedira llenar varios campos:
 -package name: Nombre del paquete.
@@ -72,3 +74,6 @@ git init
 
 Devolver cambios
 git checkout --.
+
+INSTALAR HBS -> HANDLEBARS
+npm install hbs
