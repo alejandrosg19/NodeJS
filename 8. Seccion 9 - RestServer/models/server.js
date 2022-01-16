@@ -1,4 +1,5 @@
 const express = require('express');
+const { dbConnection } = require('../database/config');
 const cors = require('cors');
 
 class Server{
@@ -6,12 +7,20 @@ class Server{
         this.app = express();
         this.port = process.env.PORT;
         this.usersPath = '/api/users';
+        
+        //Conexion a la base de datos
+        this.conectionDB();
 
-        //Middlewares funciones que añaden mas funcionalidades al web server
+        //Middlewares funciones que añaden mas funcionalidades al web server, son funciones que se 
+        //ejecutan antes de llamar a un controlador o seguir con la ejecución de mis peticiones
         //función que siempre se ejeuta cuando levantamos el servidor
         this.middlewares(); 
         //Rutas de mi app
         this.routes();
+    }
+
+    async conectionDB(){
+        await dbConnection();
     }
 
     middlewares(){
