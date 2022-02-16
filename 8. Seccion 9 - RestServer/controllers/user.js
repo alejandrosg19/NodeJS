@@ -58,7 +58,7 @@ const userPut = async ( req = request, res = response) => {
 
 const userDelete = async( req = request, res = response) => {
     const { id } = req.params;
-
+    
     //Eliminando dato directamente de la db
     // const user = await User.findByIdAndDelete(id);
 

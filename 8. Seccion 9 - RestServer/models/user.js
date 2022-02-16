@@ -21,6 +21,7 @@ const UserSchema = Schema({
         type: String,
         required: true,
         enum: ['ADMIN_ROLE', 'USER_ROLE'],
+        default: 'USER_ROLE'
     },
     state: {
         type: Boolean,
@@ -36,8 +37,8 @@ const UserSchema = Schema({
 UserSchema.methods.toJSON = function(){ 
     //Excluimos dos campos y devolvermos los demas incluidos en la variable user (__v es un campo que agrega mongo), con el this.toObject()
     //obtenemos todos los campos en un solo objeto.
-    const { __v, password, ...user} = this.toObject();
-
+    const { __v, password, _id, ...user} = this.toObject();
+    user.uid = _id;
     return user;
 }
 
