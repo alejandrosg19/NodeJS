@@ -41,10 +41,21 @@ const idProductExist = async id => {
     }
 }
 
+const coleccionesPermitidas = ( coleccion = '', colecciones = [] ) => {
+    const incluida = colecciones.includes( coleccion )
+
+    if ( !incluida ){
+        throw new Error(`La extensión ${ extension } no es valida, solo se permiten las siguientes: ${ colecciones }`)
+    }
+
+    return true
+}
+
 module.exports = {
     roleValidate,
     emailExist,
     idExist,
     idCategoryExist,
-    idProductExist
+    idProductExist,
+    coleccionesPermitidas
 }
